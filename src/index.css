@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+
+@theme {
+  --font-primary: "Poppins", sans-serif;
+
+  --color-off-white: #f8f8f8;
+  --color-light-gray: #e0e0e0;
+  --color-charcoal: #333333;
+  --color-primary: #8c5939;
+  --color-secondary: #267d92;
+  --color-muted-mustard: #e1b560;
+  --color-light-sand: #f2e9e1;
+  --color-deep-slate: #1f2a30;
+  --color-white: #ffffff;
+  --color-light: #dee2e6;
+
+  --breakpoint-sm: 320px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  --container-xl: 1150px;
+  --container-2xl: 1200px;
+  --container-3xl: 1440px;
+  --container-4xl: 1600px;
+  --container-5xl: 1800px;
+  --container-6xl: 2200px;
+}
+
+@layer base {
+  body {
+    @apply font-primary text-charcoal relative min-w-[320px] bg-white text-sm [&_a]:transition-all;
+  }
+
+  h1,
+  .h1 {
+    @apply font-bold text-2xl tracking-tighter mb-4 text-charcoal;
+    @apply lg:text-[40px];
+  }
+
+  h2,
+  .h2 {
+    @apply font-semibold text-xl mb-4 text-charcoal;
+    @apply lg:text-[32px];
+  }
+
+  h3,
+  .h3 {
+    @apply font-semibold text-xl mb-4 text-charcoal;
+  }
+
+  h4,
+  .h4 {
+    @apply font-semibold text-lg mb-4 text-charcoal;
+  }
+
+  h5,
+  .h5 {
+    @apply font-semibold text-xl mb-4 text-charcoal;
+  }
+
+  h6,
+  .h6 {
+    @apply font-semibold text-base mb-4 text-charcoal;
+  }
+}
+
+@utility container {
+  @apply mx-auto max-w-3xl px-5;
+  @apply md:px-7.5;
+}
+
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center py-2 px-4 bg-primary border border-primary text-white font-semibold rounded-md transition-colors;
+  @apply md:px-6 md:py-3;
+  @apply hover:bg-transparent hover:text-primary;
+}
+
+@utility btn-secondary {
+  @apply bg-secondary border-secondary;
+  @apply hover:text-secondary;
+}
+
+@utility btn-small {
+  @apply py-2 px-3;
+}
+
+@utility btn-blue {
+  @apply bg-[#267D92] border-[#267D92] hover:text-[#267D92];
+}
+
+@utility prev {
+  @apply left-5 top-1/2 z-10 w-8 h-8 bg-white border border-primary flex items-center justify-center cursor-pointer transition-all;
+  @apply md:w-9 md:h-9;
+  @apply lg:w-10 lg:h-10;
+  @apply hover:bg-primary hover:text-white;
+  @apply [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-50;
+}
+
+@utility next {
+  @apply right-5 top-1/2 z-10 w-8 h-8 bg-white border border-primary flex items-center justify-center cursor-pointer transition-all;
+  @apply md:w-9 md:h-9;
+  @apply lg:w-10 lg:h-10;
+  @apply hover:bg-primary hover:text-white;
+  @apply [&.swiper-button-disabled]:pointer-events-none [&.swiper-button-disabled]:opacity-50;
+}
+
+@layer components {
+  .swiper .swiper-slide-thumb-active {
+    @apply border-primary!;
+  }
+}
+
+@utility loading {
+  @apply fixed w-full h-full text-center bg-white text-3xl flex items-center justify-center font-bold;
+}

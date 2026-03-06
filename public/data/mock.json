@@ -1,0 +1,959 @@
+{
+  "siteInfo": {
+    "name": "Ecom",
+    "url": "/"
+  },
+  "header": {
+    "logo": {
+      "url": "/",
+      "alt": "Ecom",
+      "src": "/images/logo.svg"
+    },
+    "menu": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Shop",
+        "url": "/products"
+      },
+      {
+        "name": "Categories",
+        "url": "/",
+        "submenu": [
+          {
+            "name": "Table",
+            "url": "category/table"
+          },
+          {
+            "name": "Chair",
+            "url": "category/chair"
+          },
+          {
+            "name": "Wardrobe",
+            "url": "category/wardrobe"
+          },
+          {
+            "name": "Cupboard",
+            "url": "category/cupboard"
+          },
+          {
+            "name": "Sofa",
+            "url": "category/sofa"
+          },
+          {
+            "name": "Bed Table",
+            "url": "category/bed-table"
+          },
+          {
+            "name": "Bed",
+            "url": "category/bed"
+          }
+        ]
+      },
+      {
+        "name": "Blog",
+        "url": "/blog"
+      },
+      {
+        "name": "Contact",
+        "url": "/contact"
+      },
+      {
+        "name": "Account",
+        "url": "/",
+        "submenu": [
+          {
+            "name": "Sign In",
+            "url": "/signin"
+          },
+          {
+            "name": "Sign Up",
+            "url": "/signup"
+          },
+          {
+            "name": "Forgot Password",
+            "url": "/forgotPassword"
+          }
+        ]
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": 1,
+      "slug": "sofa",
+      "title": "Sofa",
+      "image": [
+        {
+          "src": "/images/product-1.png",
+          "alt": "Comfortable Sofa"
+        },
+        {
+          "src": "/images/product-2.png",
+          "alt": "Comfortable Sofa"
+        },
+        {
+          "src": "/images/product-1.png",
+          "alt": "Comfortable Sofa"
+        },
+        {
+          "src": "/images/product-1.png",
+          "alt": "Comfortable Sofa"
+        },
+        {
+          "src": "/images/product-2.png",
+          "alt": "Comfortable Sofa"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green",
+        "black"
+      ],
+      "price": {
+        "original": 15.00,
+        "discountPercent": 20,
+        "currency": "$"
+      },
+      "tags": [
+        "latest",
+        "new arrival"
+      ],
+      "categories": [
+        "sofa"
+      ],
+      "description": "<p>Experience ultimate comfort and elegance with this luxury modern sofa. Designed with high-quality soft fabric and a sturdy hardwood frame, it offers both style and durability for your living space. Its spacious seating and ergonomic cushions make it perfect for family gatherings, movie nights, or quiet moments with a book. The sleek, contemporary design blends seamlessly with any interior décor, making it a timeless addition to your home.</p>\n\n<h2>Comfortable Modern Sofa Feature</h2>\n<ul>\n<li>Removable cushions for easy cleaning</li>\n<li>Spacious seating for 3–4 people</li>\n<li>Durable hardwood frame</li>\n<li>Premium soft fabric upholstery</li>\n</ul>"
+    },
+    {
+      "id": 2,
+      "slug": "light-table",
+      "title": "Light Table",
+      "image": [
+        {
+          "src": "/images/product-3.png",
+          "alt": "Light Table"
+        },
+        {
+          "src": "/images/product-4.png",
+          "alt": "Light Table"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green",
+        "purple"
+      ],
+      "price": {
+        "original": 10.00,
+        "discountPercent": 10,
+        "currency": "$"
+      },
+      "tags": [
+        "special",
+        "new arrival"
+      ],
+      "categories": [
+        "table"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "practice-board",
+      "title": "Practice Board",
+      "image": [
+        {
+          "src": "/images/product-5.png",
+          "alt": "Practice Board"
+        },
+        {
+          "src": "/images/product-6.png",
+          "alt": "Practice Board"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 19.00,
+        "discountPercent": 5,
+        "currency": "$"
+      },
+      "tags": [
+        "special",
+        "featured"
+      ],
+      "categories": [
+        "cupboard"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "rosewood-sheesham",
+      "title": "Rosewood Sheesham",
+      "image": [
+        {
+          "src": "/images/product-7.png",
+          "alt": "Rosewood Sheesham"
+        },
+        {
+          "src": "/images/product-8.png",
+          "alt": "Rosewood Sheesham"
+        }
+      ],
+      "rating": 5,
+      "price": {
+        "original": 18.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "special"
+      ],
+      "categories": [
+        "chair"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "table-rainbow",
+      "title": "Table Rainbow",
+      "image": [
+        {
+          "src": "/images/product-9.png",
+          "alt": "Table Rainbow"
+        },
+        {
+          "src": "/images/product-10.png",
+          "alt": "Table Rainbow"
+        }
+      ],
+      "rating": 5,
+      "price": {
+        "original": 13.00,
+        "discountPercent": 10,
+        "currency": "$"
+      },
+      "tags": [
+        "special",
+        "latest",
+        "new arrival"
+      ],
+      "categories": [
+        "table"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "wood-worldih",
+      "title": "Wood Worldih",
+      "image": [
+        {
+          "src": "/images/product-11.png",
+          "alt": "Wood Worldih"
+        },
+        {
+          "src": "/images/product-12.png",
+          "alt": "Wood Worldih"
+        }
+      ],
+      "rating": 3,
+      "price": {
+        "original": 15.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "special"
+      ],
+      "categories": [
+        "bed"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "jumbo",
+      "title": "Jumbo",
+      "image": [
+        {
+          "src": "/images/product-13.png",
+          "alt": "Jumbo"
+        },
+        {
+          "src": "/images/product-14.png",
+          "alt": "Jumbo"
+        }
+      ],
+      "rating": 3,
+      "price": {
+        "original": 7.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "special"
+      ],
+      "categories": [
+        "bed"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "chair-table",
+      "title": "Chair Table",
+      "image": [
+        {
+          "src": "/images/product-15.png",
+          "alt": "Chair Table"
+        },
+        {
+          "src": "/images/product-16.png",
+          "alt": "Chair Table"
+        }
+      ],
+      "rating": 3,
+      "price": {
+        "original": 9.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "special",
+        "latest"
+      ],
+      "categories": [
+        "table"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "seater-beige",
+      "title": "Seater Beige",
+      "image": [
+        {
+          "src": "/images/product-17.png",
+          "alt": "Seater Beige"
+        },
+        {
+          "src": "/images/product-18.png",
+          "alt": "Seater Beige"
+        }
+      ],
+      "rating": 4.5,
+      "price": {
+        "original": 15.00,
+        "discountPercent": 20,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "wardrobe"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "layer-rack",
+      "title": "Layer Rack",
+      "image": [
+        {
+          "src": "/images/product-19.png",
+          "alt": "Layer Rack"
+        },
+        {
+          "src": "/images/product-20.png",
+          "alt": "Layer Rack"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 10.00,
+        "discountPercent": 10,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "wardrobe"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "blue-sofa",
+      "title": "Blue Sofa",
+      "image": [
+        {
+          "src": "/images/product-21.png",
+          "alt": "Blue Sofa"
+        },
+        {
+          "src": "/images/product-22.png",
+          "alt": "Blue Sofa"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 19.00,
+        "discountPercent": 5,
+        "currency": "$"
+      },
+      "tags": [
+        "featured",
+        "latest",
+        "new arrival"
+      ],
+      "categories": [
+        "sofa",
+        "wardrobe"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "wooden",
+      "title": "Wooden",
+      "image": [
+        {
+          "src": "/images/product-23.png",
+          "alt": "Wooden"
+        },
+        {
+          "src": "/images/product-24.png",
+          "alt": "Wooden"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 18.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "cupboard"
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "coffe-table",
+      "title": "Coffe Table",
+      "image": [
+        {
+          "src": "/images/product-25.png",
+          "alt": "Coffe Table"
+        },
+        {
+          "src": "/images/product-26.png",
+          "alt": "Coffe Table"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 13.00,
+        "discountPercent": 10,
+        "currency": "$"
+      },
+      "tags": [
+        "featured",
+        "new arrival"
+      ],
+      "categories": [
+        "bed",
+        "cupboard"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "mini-wood",
+      "title": "Mini Wood",
+      "image": [
+        {
+          "src": "/images/product-27.png",
+          "alt": "Mini Wood"
+        },
+        {
+          "src": "/images/product-28.png",
+          "alt": "Mini Wood"
+        }
+      ],
+      "rating": 4.5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "price": {
+        "original": 15.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "bed",
+        "wardrobe"
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "tea-table",
+      "title": "Tea Table",
+      "image": [
+        {
+          "src": "/images/product-29.png",
+          "alt": "Tea Table"
+        },
+        {
+          "src": "/images/product-30.png",
+          "alt": "Tea Table"
+        }
+      ],
+      "rating": 1,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green",
+        "blue"
+      ],
+      "price": {
+        "original": 7.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "wardrobe"
+      ]
+    },
+    {
+      "id": 16,
+      "slug": "study-table",
+      "title": "Study Table",
+      "image": [
+        {
+          "src": "/images/product-31.png",
+          "alt": "Study Table"
+        },
+        {
+          "src": "/images/product-32.png",
+          "alt": "Study Table"
+        }
+      ],
+      "rating": 4.5,
+      "price": {
+        "original": 9.00,
+        "discountPercent": 30,
+        "currency": "$"
+      },
+      "tags": [
+        "featured"
+      ],
+      "categories": [
+        "wardrobe"
+      ]
+    }
+  ],
+  "sections": {
+    "banner": [
+      {
+        "id": 1,
+        "badge": "Top Selling!",
+        "title": "Best Collection Furniture",
+        "button": {
+          "text": "Shop Now",
+          "url": "/products"
+        },
+        "img": {
+          "src": "/images/banner-1.png",
+          "alt": "A comfy sofa"
+        }
+      },
+      {
+        "id": 2,
+        "badge": "Top Selling!",
+        "title": "Best Collection Furniture",
+        "button": {
+          "text": "Shop Now",
+          "url": "/products"
+        },
+        "img": {
+          "src": "/images/banner-2.png",
+          "alt": "A comfy sofa"
+        }
+      }
+    ],
+    "sale": [
+      {
+        "id": 1,
+        "subtitle": "Exclusive Sale",
+        "title": "Modern",
+        "image": {
+          "src": "/images/banner-4.png",
+          "alt": "Comfortable Sofa"
+        },
+        "button": {
+          "text": "Shop Now",
+          "url": "/products"
+        }
+      },
+      {
+        "id": 2,
+        "subtitle": "Super Sale",
+        "title": "Furniture",
+        "image": {
+          "src": "/images/banner-3.png",
+          "alt": "Comfortable Sofa"
+        },
+        "button": {
+          "text": "Shop Now",
+          "url": "/products"
+        }
+      }
+    ],
+    "product": {
+      "title": "Products"
+    },
+    "feature": [
+      {
+        "title": "Free Shipping",
+        "text": "On orders over $50.",
+        "icon": {
+          "src": "/images/delivery-truck.png",
+          "alt": "Delivery Truck"
+        }
+      },
+      {
+        "title": "Money Back",
+        "text": "Money back in 7 days.",
+        "icon": {
+          "src": "/images/loan.png",
+          "alt": "Loan"
+        }
+      },
+      {
+        "title": "Secure Checkout",
+        "text": "100% Payment Secure.",
+        "icon": {
+          "src": "/images/credit-card.png",
+          "alt": "Credit Card"
+        }
+      },
+      {
+        "title": "Online Support",
+        "text": "Ensure the product quality",
+        "icon": {
+          "src": "/images/customer-service.png",
+          "alt": "Customer Service"
+        }
+      }
+    ],
+    "newarrival": {
+      "title": "New Arrivals"
+    },
+    "blog": {
+      "title": "Latest Blog"
+    },
+    "newsletter": {
+      "title": "Subscribe Our Newsletter",
+      "btn": {
+        "text": "Subscribe"
+      }
+    },
+    "pagetitle": {
+      "image": {
+        "src": "/images/banner-5.png",
+        "alt": "Image Description"
+      },
+      "title": "About Page"
+    }
+  },
+  "notFound": {
+    "title": "404 - Not found",
+    "text": "<p>The page you're looking for doesn't exist. Maybe it went on a coffee break ☕,   or got abducted by aliens 👽, or just decided to hide. </p>"
+  },
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Top 10 Must-Have Products for Smart Online Shoppers in 2026",
+      "date": "2026-01-12",
+      "image": {
+        "src": "/images/blog-1.png",
+        "alt": "Blog Image"
+      },
+      "content": "<p>Description :Top 10 Must-Have Products for Smart Online Shoppers in 2026</p>"
+    },
+    {
+      "id": 2,
+      "title": "How to Choose the Best Deals When Shopping Online: A Complete Guide",
+      "date": "2026-01-12",
+      "image": {
+        "src": "/images/blog-2.png",
+        "alt": "Blog Image"
+      }
+    },
+    {
+      "id": 3,
+      "title": "The Future of E-Commerce: Trends Every Shopper Should Know",
+      "date": "2026-01-12",
+      "image": {
+        "src": "/images/blog-3.png",
+        "alt": "Blog Image"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Why Product Reviews Matter: A Deep Dive into Buyer Decisions",
+      "date": "2026-01-12",
+      "image": {
+        "src": "/images/blog-4.png",
+        "alt": "Blog Image"
+      }
+    },
+    {
+      "id": 5,
+      "title": "5 Simple Tips to Improve Your Online Shopping Experience",
+      "date": "2026-01-12",
+      "image": {
+        "src": "/images/blog-5.png",
+        "alt": "Blog Image"
+      }
+    }
+  ],
+  "footer": {
+    "logo": {
+      "url": "/",
+      "alt": "Ecom",
+      "src": "/images/logo.svg"
+    },
+    "address": "Widgetify Inc, 456 Gadget Avenue, <br/> Techtown, TX 67890, <br/> United States of America",
+    "phone": "(987) 654-3210",
+    "email": "info@example.com",
+    "menus": [
+      {
+        "title": "My Account",
+        "menu": [
+          {
+            "name": "Orders",
+            "url": "/order"
+          },
+          {
+            "name": "Wishlist",
+            "url": "/wishlist"
+          },
+          {
+            "name": "Track Order",
+            "url": "/trackOrder"
+          },
+          {
+            "name": "Manage Account",
+            "url": "/account"
+          }
+        ]
+      },
+      {
+        "title": "Information",
+        "menu": [
+          {
+            "name": "About Us",
+            "url": "/about"
+          },
+          {
+            "name": "Return Policy",
+            "url": "/returnPolicy"
+          },
+          {
+            "name": "Privacy Policy",
+            "url": "/privacyPolicy"
+          },
+          {
+            "name": "FAQ",
+            "url": "/faq"
+          }
+        ]
+      },
+      {
+        "title": "Useful Links",
+        "menu": [
+          {
+            "name": "Orders",
+            "url": "/order"
+          },
+          {
+            "name": "Wishlist",
+            "url": "/wishlist"
+          },
+          {
+            "name": "Track Order",
+            "url": "/trackOrder"
+          },
+          {
+            "name": "Manage Account",
+            "url": "/account"
+          }
+        ]
+      },
+      {
+        "title": "Categories",
+        "menu": [
+          {
+            "name": "Bed",
+            "url": "/category/bed"
+          },
+          {
+            "name": "Sofa",
+            "url": "/category/sofa"
+          },
+          {
+            "name": "Sideboard",
+            "url": "/category/sideboard"
+          }
+        ]
+      }
+    ],
+    "copyright": "Copyright © 2024. All Rights Reserved. Themes By <a href='https://subash93.com.np/' traget='_blank'>Subash</a>"
+  },
+  "categories": [
+    {
+      "id": "1",
+      "slug": "table",
+      "title": "Table",
+      "image": {
+        "src": "/images/category-6.png",
+        "alt": "Table"
+      }
+    },
+    {
+      "id": "2",
+      "slug": "chair",
+      "title": "Chair",
+      "image": {
+        "src": "/images/category-1.png",
+        "alt": "Chair"
+      }
+    },
+    {
+      "id": "3",
+      "slug": "wardrobe",
+      "title": "Wardrobe",
+      "image": {
+        "src": "/images/category-4.png",
+        "alt": "Wardrobe"
+      }
+    },
+    {
+      "id": "4",
+      "slug": "cupboard",
+      "title": "Cupboard",
+      "image": {
+        "src": "/images/category-7.png",
+        "alt": "Cupboard"
+      }
+    },
+    {
+      "id": "5",
+      "slug": "sofa",
+      "title": "Sofa",
+      "image": {
+        "src": "/images/category-2.png",
+        "alt": "Sofa"
+      }
+    },
+    {
+      "id": "6",
+      "slug": "bed",
+      "title": "Bed",
+      "image": {
+        "src": "/images/category-5.png",
+        "alt": "Bed"
+      }
+    },
+    {
+      "id": "7",
+      "slug": "bed-table",
+      "title": "Bed Table",
+      "image": {
+        "src": "/images/category-3.png",
+        "alt": "Bed Table"
+      }
+    }
+  ]
+}

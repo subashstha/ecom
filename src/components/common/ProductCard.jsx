@@ -1,8 +1,39 @@
 import { Link } from "react-router-dom";
 import { PiHeart } from "react-icons/pi";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ item }) => {
+  const handleWishlistNotification = () => {
+    if (inWishlist) {
+      toast.error("Removed from wishlist");
+    } else {
+      toast.success("Added to wishlist");
+    }
+  };
+
+  const navigate = useNavigate();
+  const { addToWishlist, removeFromWishlist, isInWishlist, addToCart } =
+    useContext(DataContext);
+
+  const handleBuyNow = () => {
+    const buyNowItem = {
+      ...item,
+      quantity: 1,
+    };
+
+    navigate("/checkout", { state: { buyNowItem } });
+  };
+  const inWishlist = isInWishlist(item.id);
+
+  const handleWishlist = () => {
+    if (inWishlist) removeFromWishlist(item.id);
+    else addToWishlist(item);
+  };
+
   const { slug, title, image, rating, price } = item;
   return (
     <div className="card border border-light-gray rounded-md overflow-hidden relative group h-full flex flex-col">
@@ -32,13 +63,20 @@ const ProductCard = ({ item }) => {
 
       <div className="p-2 flex flex-col md:p-4 flex-1">
         <div className="card-body">
-          <Link
-            to="/wishlist"
+          <button
+            onClick={() => {
+              handleWishlist();
+              handleWishlistNotification();
+            }}
             title="Wishlist"
-            className="icons absolute top-2 -right-full aspect-square w-7 md:w-10 bg-white shadow rounded-sm inline-flex items-center justify-center transition-all hover:text-white hover:bg-primary group-hover:right-2 duration-300"
+            className={`icons absolute top-2 cursor-pointer -right-full aspect-square w-7 md:w-10 shadow rounded-sm inline-flex items-center justify-center transition-all hover:text-white  group-hover:right-2 duration-300 ${
+              inWishlist
+                ? "bg-pink-300 hover:bg-pink-500"
+                : "bg-white hover:bg-primary"
+            }`}
           >
-            <PiHeart />
-          </Link>
+            <PiHeart size={18} />
+          </button>
           {price.discountPercent && (
             <span className="absolute top-2 -left-full bg-red-600 text-white text-xs font-semibold px-2 md:px-4 h-7 md:h-10 inline-flex items-center rounded shadow transition-all group-hover:left-2 duration-300">
               {price.discountPercent}% OFF
@@ -86,12 +124,21 @@ const ProductCard = ({ item }) => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-2">
-          <Link to="/cart" className="btn flex-1 text-xs">
+          <button
+            onClick={() => {
+              addToCart(item, 1, true);
+              toast.success("Added to cart");
+            }}
+            className="btn flex-1 text-xs"
+          >
             Add to Cart
-          </Link>
-          <Link to="/checkout" className="btn flex-1 btn-secondary text-xs">
+          </button>
+          <button
+            className="btn btn-blue flex-1 text-xs"
+            onClick={handleBuyNow}
+          >
             Buy Now
-          </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -85,6 +85,10 @@
   @apply hover:text-secondary;
 }
 
+@utility btn-red {
+  @apply bg-[#FB2C36] border-[#FB2C36] hover:text-[#FB2C36];
+}
+
 @utility btn-small {
   @apply py-2 px-3;
 }

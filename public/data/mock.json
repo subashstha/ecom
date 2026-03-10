@@ -24,31 +24,31 @@
         "submenu": [
           {
             "name": "Table",
-            "url": "category/table"
+            "url": "/category/table"
           },
           {
             "name": "Chair",
-            "url": "category/chair"
+            "url": "/category/chair"
           },
           {
             "name": "Wardrobe",
-            "url": "category/wardrobe"
+            "url": "/category/wardrobe"
           },
           {
             "name": "Cupboard",
-            "url": "category/cupboard"
+            "url": "/category/cupboard"
           },
           {
             "name": "Sofa",
-            "url": "category/sofa"
+            "url": "/category/sofa"
           },
           {
             "name": "Bed Table",
-            "url": "category/bed-table"
+            "url": "/category/bed-table"
           },
           {
             "name": "Bed",
-            "url": "category/bed"
+            "url": "/category/bed"
           }
         ]
       },
@@ -62,21 +62,7 @@
       },
       {
         "name": "Account",
-        "url": "/",
-        "submenu": [
-          {
-            "name": "Sign In",
-            "url": "/signin"
-          },
-          {
-            "name": "Sign Up",
-            "url": "/signup"
-          },
-          {
-            "name": "Forgot Password",
-            "url": "/forgotPassword"
-          }
-        ]
+        "url": "/user"
       }
     ]
   },
@@ -804,8 +790,8 @@
       "alt": "Ecom",
       "src": "/images/logo.svg"
     },
-    "address": "Widgetify Inc, 456 Gadget Avenue, <br/> Techtown, TX 67890, <br/> United States of America",
-    "phone": "(987) 654-3210",
+    "address": "Kathmandu 17, Nepal <br/> Baiteshwor 2, Dolakha",
+    "phone": "(977) 9800000000",
     "email": "info@example.com",
     "menus": [
       {
@@ -820,54 +806,25 @@
             "url": "/wishlist"
           },
           {
-            "name": "Track Order",
-            "url": "/trackOrder"
-          },
-          {
             "name": "Manage Account",
-            "url": "/account"
+            "url": "/user"
           }
         ]
       },
       {
-        "title": "Information",
+        "title": "Useful links",
         "menu": [
           {
-            "name": "About Us",
-            "url": "/about"
+            "name": "Products",
+            "url": "/products"
           },
           {
-            "name": "Return Policy",
-            "url": "/returnPolicy"
+            "name": "Contact",
+            "url": "/contact"
           },
           {
-            "name": "Privacy Policy",
-            "url": "/privacyPolicy"
-          },
-          {
-            "name": "FAQ",
-            "url": "/faq"
-          }
-        ]
-      },
-      {
-        "title": "Useful Links",
-        "menu": [
-          {
-            "name": "Orders",
-            "url": "/order"
-          },
-          {
-            "name": "Wishlist",
-            "url": "/wishlist"
-          },
-          {
-            "name": "Track Order",
-            "url": "/trackOrder"
-          },
-          {
-            "name": "Manage Account",
-            "url": "/account"
+            "name": "Blog",
+            "url": "/blog"
           }
         ]
       },
@@ -875,21 +832,37 @@
         "title": "Categories",
         "menu": [
           {
-            "name": "Bed",
-            "url": "/category/bed"
+            "name": "Table",
+            "url": "/category/table"
+          },
+          {
+            "name": "Chair",
+            "url": "/category/chair"
+          },
+          {
+            "name": "Wardrobe",
+            "url": "/category/wardrobe"
+          },
+          {
+            "name": "Cupboard",
+            "url": "/category/cupboard"
           },
           {
             "name": "Sofa",
             "url": "/category/sofa"
           },
           {
-            "name": "Sideboard",
-            "url": "/category/sideboard"
+            "name": "Bed Table",
+            "url": "/category/bed-table"
+          },
+          {
+            "name": "Bed",
+            "url": "/category/bed"
           }
         ]
       }
     ],
-    "copyright": "Copyright © 2024. All Rights Reserved. Themes By <a href='https://subash93.com.np/' traget='_blank'>Subash</a>"
+    "copyright": "Copyright © 2026. All Rights Reserved. Themes By <a href='https://subash93.com.np/' traget='_blank'>Subash</a>"
   },
   "categories": [
     {

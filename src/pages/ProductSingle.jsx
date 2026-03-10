@@ -8,20 +8,34 @@ import { FaCheck } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import ProductCounter from "../components/common/ProductCounter";
-import Button from "../components/common/Button";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsLightningChargeFill } from "react-icons/bs";
 import RelatedProducts from "../components/sections/RelatedProducts";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductSingle = () => {
+  const navigate = useNavigate();
   const { slug } = useParams();
-  const { data } = useContext(DataContext);
-  const products = data?.products || [];
+  const { data, addToCart, cart } = useContext(DataContext);
 
+  const handleBuyNow = () => {
+    const buyNowItem = {
+      ...product,
+      quantity: quantity,
+    };
+
+    navigate("/checkout", { state: { buyNowItem } });
+  };
+
+  const products = data?.products || [];
   if (!products.length) return <div className="loading">Loading...</div>;
 
   const product = products.find((p) => p.slug === slug);
   if (!product) return <div>Product not found</div>;
+
+  const cartItem = cart.find((c) => c.id === product.id);
+  const [quantity, setQuantity] = useState(cartItem ? cartItem.quantity : 1);
 
   const discountedPrice =
     product.price.original * (1 - product.price.discountPercent / 100);
@@ -175,19 +189,26 @@ const ProductSingle = () => {
               </div>
             )}
 
-            <ProductCounter />
+            <ProductCounter
+              quantity={quantity}
+              onChange={setQuantity} // ✅ just update local state
+            />
             <div className="mt-6 flex items-center gap-2">
-              <Button
-                buttonText="Add to cart"
-                target="/cart"
-                icon={<FiShoppingCart />}
-              />
-              <Button
-                buttonText="Buy Now"
-                target="/checkout"
-                className="btn-blue"
-                icon={<BsLightningChargeFill />}
-              />
+              <button
+                className="btn"
+                onClick={() => {
+                  addToCart(product, quantity);
+                  toast.success("Added to cart");
+                }}
+              >
+                <FiShoppingCart className="mr-2" />
+                Add to cart
+              </button>
+
+              <button className="btn btn-blue" onClick={handleBuyNow}>
+                <BsLightningChargeFill className="mr-2" />
+                Buy Now
+              </button>
             </div>
           </div>
         </div>

@@ -4,16 +4,20 @@ import { Link } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
 import Search from "../common/Search";
 import { Logo } from "./Logo";
-import { CiSearch, CiUser, CiHeart, CiShoppingCart } from "react-icons/ci";
+import { CiSearch, CiHeart, CiShoppingCart } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
 import { TfiClose } from "react-icons/tfi";
 import Input from "../common/Input";
+import HeaderUser from "../common/HeaderUser";
+import { useAuth } from "../../hooks/useAuth";
 
 const Header = () => {
   const { data } = useContext(DataContext);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMenuIndex, setOpenMenuIndex] = useState(null);
+  const { user } = useAuth();
+  const { cart } = useContext(DataContext);
 
   const { menu } = data.header;
 
@@ -25,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-4 md:py-5 relative z-99">
+      <header className="py-4 md:py-5 relative z-99 md:sticky top-0 bg-white border-b border-b-light">
         <div className="container">
           <div className="header-holder lg:flex lg:flex-wrap lg:items-center lg:justify-between">
             <div className="text-center">
@@ -83,6 +87,8 @@ const Header = () => {
                               setOpenMenuIndex(
                                 openMenuIndex === index ? null : index,
                               );
+                            } else {
+                              setIsMenuOpen(false);
                             }
                           }}
                         >
@@ -101,6 +107,7 @@ const Header = () => {
                             {item.submenu.map((subItem, subIndex) => (
                               <li key={subIndex}>
                                 <Link
+                                  onClick={() => setIsMenuOpen(false)}
                                   to={subItem.url}
                                   className="hover:text-primary transition-color duration-300"
                                 >
@@ -126,42 +133,42 @@ const Header = () => {
                       <span className="text-[10px]">Search</span>
                     </button>
                   </li>
-                  <li>
-                    <Link
-                      to="/user"
-                      className="flex flex-col justify-center items-center gap-y-1 hover:text-primary transition-color duration-300"
-                    >
-                      <CiUser />
-                      <span className="hidden lg:inline-block text-[10px]">
-                        Account
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/user"
-                      className="flex flex-col justify-center items-center gap-y-1 hover:text-primary transition-color duration-300"
-                    >
-                      <CiHeart />
-                      <span className="hidden lg:inline-block text-[10px]">
-                        Wishlist
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/cart"
-                      className="flex flex-col justify-center items-center gap-y-1 hover:text-primary transition-color duration-300 relative pr-2 lg:pr-0"
-                    >
-                      <span className="bg-primary text-white text-[10px] w-4 h-4 inline-flex items-center justify-center rounded-full absolute right-0 -top-1">
-                        3
-                      </span>
-                      <CiShoppingCart />
-                      <span className="hidden lg:inline-block text-[10px]">
-                        Your Cart
-                      </span>
-                    </Link>
-                  </li>
+
+                  <HeaderUser />
+                  {user ? (
+                    <>
+                      <li>
+                        <Link
+                          to="/wishlist"
+                          className="flex flex-col justify-center items-center gap-y-1 hover:text-primary transition-color duration-300"
+                        >
+                          <CiHeart />
+                          <span className="hidden lg:inline-block text-[10px]">
+                            Wishlist
+                          </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/cart"
+                          className="flex flex-col justify-center items-center gap-y-1 hover:text-primary transition-color duration-300 relative pr-2 lg:pr-0"
+                        >
+                          <span className="bg-primary text-white text-[10px] w-4 h-4 inline-flex items-center justify-center rounded-full absolute right-0 -top-1">
+                            {cart.reduce(
+                              (total, item) => total + item.quantity,
+                              0,
+                            )}
+                          </span>
+                          <CiShoppingCart />
+                          <span className="hidden lg:inline-block text-[10px]">
+                            Your Cart
+                          </span>
+                        </Link>
+                      </li>
+                    </>
+                  ) : (
+                    ""
+                  )}
                 </ul>
               </div>
             </div>

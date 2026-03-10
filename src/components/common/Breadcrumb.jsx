@@ -20,7 +20,7 @@ const Breadcrumb = () => {
         return (
           <li
             key={index}
-            className="breadcrumb-item flex flex-wrap items-center gap-2 capitalize text-primary"
+            className="breadcrumb-item flex text-left items-center gap-2 capitalize text-primary"
           >
             <FaAngleRight />
 

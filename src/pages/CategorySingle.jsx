@@ -19,7 +19,7 @@ const CategorySingle = () => {
   if (!categoryProducts.length)
     return (
       <>
-        <div className="py-20">
+        <div className="py-10 lg:py-20">
           <div className="container mx-auto">
             <h1 className="text-3xl font-semibold mb-10 tracking-normal">
               No products found in this category :{" "}
@@ -31,7 +31,7 @@ const CategorySingle = () => {
     );
 
   return (
-    <section className="category-single container mx-auto py-20">
+    <section className="category-single container mx-auto py-10 lg:py-20">
       <h2 className="text-3xl font-semibold mb-10">
         Category : {categoryTitle}
       </h2>

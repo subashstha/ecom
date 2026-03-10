@@ -1,6 +1,5 @@
 export const ROUTES = {
   HOME: "/",
-  ABOUT: "/about",
   SHOP: "/products",
   PRODUCTSINGLE: "products/:slug",
   CATEGORY: "category",
@@ -8,7 +7,15 @@ export const ROUTES = {
   BLOG: "blog",
   BLOGSINGLE: "blog/:slug",
   CONTACT: "contact",
+  REGISTER: "/register",
   LOGIN: "/login",
+  RESETPASSWORD: "/forgotPassword",
   DASHBOARD: "/dashboard",
+  USER: "/user",
+  SEARCH: "/search",
+  WISHLIST: "/wishlist",
+  CART: "/cart",
+  CHECKOUT: "/checkout",
+  ORDER: "/order",
   NOTFOUND: "*",
 };

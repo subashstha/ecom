@@ -181,7 +181,7 @@ const ProductFilter = () => {
             )}
 
             {totalPages > 1 && (
-              <div className="pagination-main rounded-md bg-off-white p-5 mt-10 flex flex-wrap w-full justify-between items-center">
+              <div className="pagination-main gap-4 rounded-md bg-off-white p-5 mt-10 flex flex-wrap w-full justify-between items-center">
                 <div className="pagination_result">
                   Showing page {currentPage} of {totalPages} (
                   {filteredProducts.length} Products)

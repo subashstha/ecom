@@ -5,9 +5,13 @@ import Header from "../components/header/Header";
 const Layout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <div className="main flex-1" id="main">
+          <Outlet />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 };

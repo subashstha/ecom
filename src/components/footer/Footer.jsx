@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import { Logo } from "../footer/Logo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { data } = useContext(DataContext);
@@ -58,12 +59,12 @@ const Footer = () => {
                     <ul className="flex flex-col gap-2">
                       {menuItem.menu?.map((subItem, subIndex) => (
                         <li key={subIndex}>
-                          <a
-                            href={subItem.url}
+                          <Link
+                            to={subItem.url}
                             className="hover:text-primary transition-colors"
                           >
                             {subItem.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>

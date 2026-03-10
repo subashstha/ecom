@@ -18,7 +18,7 @@ import User from "../pages/User";
 import ProtectedRoute from "../features/auth/ProtectedRoute";
 import SearchResult from "../pages/SearchResult";
 import Wishlist from "../pages/Wishlist";
-import Cart from "../pages/cart";
+import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
 import Order from "../pages/Order";
 
